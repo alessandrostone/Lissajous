@@ -13,18 +13,9 @@
 		2E7414631AD272320090B17E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E7414611AD272320090B17E /* Main.storyboard */; };
 		2E7414651AD272320090B17E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E7414641AD272320090B17E /* Images.xcassets */; };
 		2E7414681AD272320090B17E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E7414661AD272320090B17E /* LaunchScreen.xib */; };
-		2E7414741AD272320090B17E /* LissajousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7414731AD272320090B17E /* LissajousTests.m */; };
+		2E7414801AD272A40090B17E /* DLLissajousView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E74147F1AD272A40090B17E /* DLLissajousView.m */; };
+		2E7414831AD272F70090B17E /* DLLissajousLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7414821AD272F70090B17E /* DLLissajousLayer.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2E74146E1AD272320090B17E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2E74144C1AD272310090B17E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2E7414531AD272310090B17E;
-			remoteInfo = Lissajous;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2E7414541AD272310090B17E /* Lissajous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lissajous.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,20 +28,14 @@
 		2E7414621AD272320090B17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E7414641AD272320090B17E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E7414671AD272320090B17E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		2E74146D1AD272320090B17E /* LissajousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LissajousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E7414721AD272320090B17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E7414731AD272320090B17E /* LissajousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LissajousTests.m; sourceTree = "<group>"; };
+		2E74147E1AD272A40090B17E /* DLLissajousView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLissajousView.h; sourceTree = "<group>"; };
+		2E74147F1AD272A40090B17E /* DLLissajousView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLissajousView.m; sourceTree = "<group>"; };
+		2E7414811AD272F70090B17E /* DLLissajousLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLLissajousLayer.h; sourceTree = "<group>"; };
+		2E7414821AD272F70090B17E /* DLLissajousLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLLissajousLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2E7414511AD272310090B17E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E74146A1AD272320090B17E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,8 +48,8 @@
 		2E74144B1AD272310090B17E = {
 			isa = PBXGroup;
 			children = (
+				2E74147D1AD272950090B17E /* src */,
 				2E7414561AD272310090B17E /* Lissajous */,
-				2E7414701AD272320090B17E /* LissajousTests */,
 				2E7414551AD272310090B17E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				2E7414541AD272310090B17E /* Lissajous.app */,
-				2E74146D1AD272320090B17E /* LissajousTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,21 +86,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2E7414701AD272320090B17E /* LissajousTests */ = {
+		2E74147D1AD272950090B17E /* src */ = {
 			isa = PBXGroup;
 			children = (
-				2E7414731AD272320090B17E /* LissajousTests.m */,
-				2E7414711AD272320090B17E /* Supporting Files */,
+				2E74147E1AD272A40090B17E /* DLLissajousView.h */,
+				2E74147F1AD272A40090B17E /* DLLissajousView.m */,
+				2E7414811AD272F70090B17E /* DLLissajousLayer.h */,
+				2E7414821AD272F70090B17E /* DLLissajousLayer.m */,
 			);
-			path = LissajousTests;
-			sourceTree = "<group>";
-		};
-		2E7414711AD272320090B17E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2E7414721AD272320090B17E /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +117,6 @@
 			productReference = 2E7414541AD272310090B17E /* Lissajous.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2E74146C1AD272320090B17E /* LissajousTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2E74147A1AD272320090B17E /* Build configuration list for PBXNativeTarget "LissajousTests" */;
-			buildPhases = (
-				2E7414691AD272320090B17E /* Sources */,
-				2E74146A1AD272320090B17E /* Frameworks */,
-				2E74146B1AD272320090B17E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2E74146F1AD272320090B17E /* PBXTargetDependency */,
-			);
-			name = LissajousTests;
-			productName = LissajousTests;
-			productReference = 2E74146D1AD272320090B17E /* LissajousTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +128,6 @@
 				TargetAttributes = {
 					2E7414531AD272310090B17E = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					2E74146C1AD272320090B17E = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 2E7414531AD272310090B17E;
 					};
 				};
 			};
@@ -189,7 +145,6 @@
 			projectRoot = "";
 			targets = (
 				2E7414531AD272310090B17E /* Lissajous */,
-				2E74146C1AD272320090B17E /* LissajousTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E74146B1AD272320090B17E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,28 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E7414601AD272310090B17E /* ViewController.m in Sources */,
+				2E7414831AD272F70090B17E /* DLLissajousLayer.m in Sources */,
 				2E74145D1AD272310090B17E /* AppDelegate.m in Sources */,
+				2E7414801AD272A40090B17E /* DLLissajousView.m in Sources */,
 				2E74145A1AD272310090B17E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E7414691AD272320090B17E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E7414741AD272320090B17E /* LissajousTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2E74146F1AD272320090B17E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2E7414531AD272310090B17E /* Lissajous */;
-			targetProxy = 2E74146E1AD272320090B17E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2E7414611AD272320090B17E /* Main.storyboard */ = {
@@ -361,40 +295,6 @@
 			};
 			name = Release;
 		};
-		2E74147B1AD272320090B17E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LissajousTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lissajous.app/Lissajous";
-			};
-			name = Debug;
-		};
-		2E74147C1AD272320090B17E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LissajousTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lissajous.app/Lissajous";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +312,6 @@
 			buildConfigurations = (
 				2E7414781AD272320090B17E /* Debug */,
 				2E7414791AD272320090B17E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		2E74147A1AD272320090B17E /* Build configuration list for PBXNativeTarget "LissajousTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E74147B1AD272320090B17E /* Debug */,
-				2E74147C1AD272320090B17E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
