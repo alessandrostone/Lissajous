@@ -13,6 +13,7 @@ static const CGFloat kTwoPI = M_PI * 2;
 @interface DLLissajousLayer ()
 
 @property (nonatomic, strong) CADisplayLink *displayLink;
+@property (nonatomic, assign) CGFloat delta;
 
 @end
 
@@ -26,7 +27,7 @@ static const CGFloat kTwoPI = M_PI * 2;
         _b = 3;
         _delta = 0;
         _velocity = 0.02;
-        _wave = DLLissajousLayerWaveTriangular;
+        _wave = DLLissajousLayerWaveSine;
         
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(animationFired:)];
         [_displayLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSDefaultRunLoopMode];
@@ -49,7 +50,7 @@ static const CGFloat kTwoPI = M_PI * 2;
 
     CGFloat horizontalAmplitude = CGRectGetWidth(bounds) / 2 - 1;
     CGFloat verticalAmplitude = CGRectGetHeight(bounds) / 2 - 1;
-    CGFloat increment = kTwoPI / (self.a * self.b * 100);
+    CGFloat increment = kTwoPI / (self.a * self.b * 100.0);
     
     CGMutablePathRef path = CGPathCreateMutable();
     

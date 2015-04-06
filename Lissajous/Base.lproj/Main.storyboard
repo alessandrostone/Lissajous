@@ -19,20 +19,81 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9o4-bi-qYA" customClass="DLLissajousView">
-                                <rect key="frame" x="75" y="74.5" width="450" height="450"/>
+                                <rect key="frame" x="75" y="50" width="450" height="450"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9o4-bi-qYA" secondAttribute="height" multiplier="1:1" id="4PL-VZ-5pf"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7gO-Ao-s7V">
+                                <rect key="frame" x="75" y="530" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Sine"/>
+                                    <segment title="Triangle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didTapWaveType:" destination="BYZ-38-t0r" eventType="valueChanged" id="3bA-wp-66D"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wave type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teb-CK-nKk">
+                                <rect key="frame" x="218" y="534" width="75" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyg-GT-0NF">
+                                <rect key="frame" x="218" y="571" width="28.5" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ake-D9-Vhz">
+                                <rect key="frame" x="73" y="566" width="127" height="31"/>
+                                <connections>
+                                    <action selector="didChangeA:" destination="BYZ-38-t0r" eventType="valueChanged" id="LGv-gX-5z8"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="v72-c9-XG8">
+                                <rect key="frame" x="73" y="604" width="127" height="31"/>
+                                <connections>
+                                    <action selector="didChangeB:" destination="BYZ-38-t0r" eventType="valueChanged" id="CRP-N4-FfC"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B: 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ont-oO-9Nk">
+                                <rect key="frame" x="218" y="609" width="29" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="9o4-bi-qYA" secondAttribute="centerY" constant="0.5" id="Aso-2g-6GC"/>
+                            <constraint firstItem="v72-c9-XG8" firstAttribute="centerY" secondItem="ont-oO-9Nk" secondAttribute="centerY" constant="0.5" id="0iD-ui-7aF"/>
+                            <constraint firstItem="Ake-D9-Vhz" firstAttribute="trailing" secondItem="v72-c9-XG8" secondAttribute="trailing" id="6Pa-sg-pyZ"/>
+                            <constraint firstItem="v72-c9-XG8" firstAttribute="top" secondItem="Ake-D9-Vhz" secondAttribute="bottom" constant="8" id="9FY-h7-Lp8"/>
+                            <constraint firstItem="7gO-Ao-s7V" firstAttribute="baseline" secondItem="teb-CK-nKk" secondAttribute="baseline" constant="-0.5" id="Auh-pa-2Ex"/>
+                            <constraint firstItem="yyg-GT-0NF" firstAttribute="leading" secondItem="Ake-D9-Vhz" secondAttribute="trailing" constant="20" id="Ckl-wW-KcZ"/>
+                            <constraint firstItem="7gO-Ao-s7V" firstAttribute="top" secondItem="9o4-bi-qYA" secondAttribute="bottom" constant="30" id="Dpc-Ak-oZh"/>
+                            <constraint firstItem="7gO-Ao-s7V" firstAttribute="leading" secondItem="v72-c9-XG8" secondAttribute="leading" id="JZB-IY-Zg1"/>
+                            <constraint firstItem="7gO-Ao-s7V" firstAttribute="leading" secondItem="9o4-bi-qYA" secondAttribute="leading" id="QBz-bu-Nts"/>
+                            <constraint firstItem="9o4-bi-qYA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Wux-Oq-hOE"/>
+                            <constraint firstItem="Ake-D9-Vhz" firstAttribute="trailing" secondItem="7gO-Ao-s7V" secondAttribute="trailing" id="fd5-4f-KCc"/>
+                            <constraint firstItem="Ake-D9-Vhz" firstAttribute="top" secondItem="7gO-Ao-s7V" secondAttribute="bottom" constant="8" id="fdz-4j-imn"/>
+                            <constraint firstItem="Ake-D9-Vhz" firstAttribute="leading" secondItem="7gO-Ao-s7V" secondAttribute="leading" id="hrZ-Qk-SKV"/>
+                            <constraint firstItem="yyg-GT-0NF" firstAttribute="centerY" secondItem="Ake-D9-Vhz" secondAttribute="centerY" constant="-0.5" id="i2l-7Y-eXp"/>
+                            <constraint firstItem="teb-CK-nKk" firstAttribute="leading" secondItem="7gO-Ao-s7V" secondAttribute="trailing" constant="20" id="iyV-kR-w2F"/>
+                            <constraint firstItem="ont-oO-9Nk" firstAttribute="leading" secondItem="v72-c9-XG8" secondAttribute="trailing" constant="20" id="naB-1r-fG4"/>
                             <constraint firstAttribute="centerX" secondItem="9o4-bi-qYA" secondAttribute="centerX" id="pfh-TO-VQx"/>
                             <constraint firstItem="9o4-bi-qYA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="pp2-O1-PoT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="aLabel" destination="yyg-GT-0NF" id="y9H-ch-GLc"/>
+                        <outlet property="aSlider" destination="Ake-D9-Vhz" id="gOL-Uz-MCe"/>
+                        <outlet property="bLabel" destination="ont-oO-9Nk" id="hO2-0P-xfB"/>
+                        <outlet property="bSlider" destination="v72-c9-XG8" id="20K-VS-5zg"/>
+                        <outlet property="lissajousView" destination="9o4-bi-qYA" id="W0B-aA-ggE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

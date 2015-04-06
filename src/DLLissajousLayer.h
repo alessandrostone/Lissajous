@@ -15,10 +15,9 @@ typedef NS_ENUM(NSUInteger, DLLissajousLayerWave) {
 
 @interface DLLissajousLayer : CALayer
 
-@property (nonatomic, assign) CGFloat a;
-@property (nonatomic, assign) CGFloat b;
+@property (nonatomic, assign) NSUInteger a;
+@property (nonatomic, assign) NSUInteger b;
 @property (nonatomic, assign) DLLissajousLayerWave wave;
-@property (nonatomic, assign) CGFloat delta;
 @property (nonatomic, assign) CGFloat velocity;
 
 @end
